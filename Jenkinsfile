@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'Jenkins'
-    }
-
-  }
+  agent any
   stages {
     stage('error') {
       steps {
