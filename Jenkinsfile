@@ -1,7 +1,12 @@
 pipeline {
-  agent none
+  agent {
+    node {
+      label 'Jenkins'
+    }
+
+  }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh 'sh \'/opt/jenkins/packer validate /opt/jenkins/packer.json\''
       }
